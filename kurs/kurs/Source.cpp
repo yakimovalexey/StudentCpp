@@ -79,10 +79,10 @@ public:
 		T * arr2 = new T[this->get_size() - 1];
 		for (int i = 0; i < this->get_size() - 1; i++)
 			arr2[i] = this->arr[i];
+		this->set_size(this->size - 1);
 		delete[] this->arr;
 		this->arr = new T;
 		this->arr = arr2;
-		this->set_size(this->size - 1);
 	}
 
 	T top()
@@ -228,9 +228,8 @@ void read_file(Labirint &labirint)
 
 void new_file(Labirint &labirint)
 {
-	ofstream out("save.txt");
 	int lines, columns;
-	cout << "Файл не найден! Создаем новый массив:" << endl;
+	cout << "Файл save.txt не найден! Создаем новый массив:" << endl;
 	cout << "Кол-во строк = "; cin >> lines;
 	cout << "Кол-во столбцов = "; cin >> columns;
 	labirint.set_lines(lines);
@@ -244,10 +243,13 @@ void new_file(Labirint &labirint)
 		}
 
 	int start[2];
-	cout << "Координаты входа в лабиринт: ";
-	cin >> start[0]; out << start[0] << ' ';
-	cin >> start[1]; out << start[1] << endl;
+	cout << "Координаты стартовой клетки: ";
+	cin >> start[0];
+	cin >> start[1];
 
+	ofstream out("save.txt");
+	out << start[0] << ' ';
+	out << start[1] << endl;
 	for (int i = 0; i < labirint.get_lines(); i++)
 	{
 		for (int j = 0; j < labirint.get_columns(); j++)
@@ -273,8 +275,7 @@ bool fill_stack(Stack<Path_Node>& path_stack, Labirint &labirint)
 			{
 				if (labirint.get_value(i, j) == cur_cell_val)
 				{
-					for (int  i_sosed = max(i - 1, 0);
-						i_sosed <= min(i + 1, labirint.get_lines() - 1); ++i_sosed)
+					for (int i_sosed = max(i - 1, 0); i_sosed <= min(i + 1, labirint.get_lines() - 1); ++i_sosed)
 					{
 						for (int j_sosed = max(j - 1, 0); j_sosed <= min(j + 1, labirint.get_columns() - 1); ++j_sosed)
 						{
