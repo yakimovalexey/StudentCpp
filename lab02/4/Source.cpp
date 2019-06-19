@@ -12,19 +12,10 @@ int main()
 	int mod5;
 	cout << "Enter the number: "; cin >> a;
 	check(sign, parity, mod5, greater10);
-	if (sign)
-		cout << "Is the number positive? Yes" << endl;
-	else
-		cout << "Is the number positive? No" << endl;
-	if (parity)
-		cout << "Is the number even? No" << endl;
-	else
-		cout << "Is the number even? Yes" << endl;
+	cout << "Is the number positive?" << (sign ? " Yes" : " No") << endl;
+	cout << "Is the number even?" << (parity ? " No" : " Yes") << endl;
 	cout << "The remainder of the division by 5 = " << mod5 << endl;
-	if (greater10)
-		cout << "Is the number greater than 10? Yes" << endl;
-	else
-		cout << "Is the number greater than 10? No" << endl;
+	cout << "Is the number greater than 10?" << (greater10 ? " Yes" : " No") << endl;
 	_getch();
 }
 
