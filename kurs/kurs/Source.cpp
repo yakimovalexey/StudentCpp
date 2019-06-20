@@ -163,7 +163,7 @@ int main()
 
 	if (!fill_stack(path_stack, labirint))
 	{
-		cout << "Íåò âûõîäà!" << endl;
+		cout << "ĞĞµÑ‚ Ğ²Ñ‹Ñ…Ğ¾Ğ´Ğ°!" << endl;
 	}
 	else
 	{
@@ -229,9 +229,9 @@ void read_file(Labirint &labirint)
 void new_file(Labirint &labirint)
 {
 	int lines, columns;
-	cout << "Ôàéë save.txt íå íàéäåí! Ñîçäàåì íîâûé ìàññèâ:" << endl;
-	cout << "Êîë-âî ñòğîê = "; cin >> lines;
-	cout << "Êîë-âî ñòîëáöîâ = "; cin >> columns;
+	cout << "Ğ¤Ğ°Ğ¹Ğ» save.txt Ğ½Ğµ Ğ½Ğ°Ğ¹Ğ´ĞµĞ½! Ğ¡Ğ¾Ğ·Ğ´Ğ°ĞµĞ¼ Ğ½Ğ¾Ğ²Ñ‹Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ²:" << endl;
+	cout << "ĞšĞ¾Ğ»-Ğ²Ğ¾ ÑÑ‚Ñ€Ğ¾Ğº = "; cin >> lines;
+	cout << "ĞšĞ¾Ğ»-Ğ²Ğ¾ ÑÑ‚Ğ¾Ğ»Ğ±Ñ†Ğ¾Ğ² = "; cin >> columns;
 	labirint.set_lines(lines);
 	labirint.set_columns(columns);
 	int value;
@@ -243,7 +243,7 @@ void new_file(Labirint &labirint)
 		}
 
 	int start[2];
-	cout << "Êîîğäèíàòû ñòàğòîâîé êëåòêè: ";
+	cout << "ĞšĞ¾Ğ¾Ñ€Ğ´Ğ¸Ğ½Ğ°Ñ‚Ñ‹ ÑÑ‚Ğ°Ñ€Ñ‚Ğ¾Ğ²Ğ¾Ğ¹ ĞºĞ»ĞµÑ‚ĞºĞ¸: ";
 	cin >> start[0];
 	cin >> start[1];
 
@@ -300,11 +300,11 @@ bool fill_stack(Stack<Path_Node>& path_stack, Labirint &labirint)
 void print_path(Stack<Path_Node> stack)
 {
 	int step = 1;
-	cout << "Ìàğøğóò â ëàáèğèíòå îò âûõîäà äî ñòàğòîâîé êëåòêè:" << endl;
+	cout << "ĞœĞ°Ñ€ÑˆÑ€ÑƒÑ‚ Ğ² Ğ»Ğ°Ğ±Ğ¸Ñ€Ğ¸Ğ½Ñ‚Ğµ Ğ¾Ñ‚ Ğ²Ñ‹Ñ…Ğ¾Ğ´Ğ° Ğ´Ğ¾ ÑÑ‚Ğ°Ñ€Ñ‚Ğ¾Ğ²Ğ¾Ğ¹ ĞºĞ»ĞµÑ‚ĞºĞ¸:" << endl;
 	for (;;)
 	{
 		Cell prev_cell = stack.top().Get_prev_cell();
-		cout << "Øàã " << step << ": " << stack.top().Get_cur_cell() << " -> " << stack.top().Get_prev_cell() << endl;
+		cout << "Ğ¨Ğ°Ğ³ " << step << ": " << stack.top().Get_cur_cell() << " -> " << stack.top().Get_prev_cell() << endl;
 		if (stack.get_size() == 1)
 		{
 			return;
