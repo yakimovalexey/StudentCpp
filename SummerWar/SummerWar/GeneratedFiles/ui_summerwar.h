@@ -9,12 +9,13 @@
 #ifndef UI_SUMMERWAR_H
 #define UI_SUMMERWAR_H
 
-#include <QtCore/QLocale>
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -23,138 +24,421 @@ class Ui_SummerWarClass
 {
 public:
     QWidget *centralWidget;
-    QPushButton *pushButtonNumberSeven;
-    QLabel *label;
-    QPushButton *pushButtonNumberEight;
-    QPushButton *pushButtonNumberNine;
-    QPushButton *pushButtonMultiply;
-    QPushButton *pushButtonNumberFive;
+    QGridLayout *gridLayout;
     QPushButton *pushButtonMinus;
-    QPushButton *pushButtonNumberFour;
-    QPushButton *pushButtonNumberSix;
-    QPushButton *pushButtonNumberTwo;
-    QPushButton *pushButtonPlus;
-    QPushButton *pushButtonNumberOne;
-    QPushButton *pushButtonNumberThree;
-    QPushButton *pushButtonNumberZero;
-    QPushButton *pushButtonEqual;
+    QPushButton *pushButtonErase;
+    QPushButton *pushButtonSqr;
     QPushButton *pushButtonNegate;
     QPushButton *pushButtonDot;
-    QPushButton *pushButtonErase;
+    QLabel *labelEntry;
+    QPushButton *pushButton5;
+    QPushButton *pushButton9;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContents;
+    QGridLayout *gridLayout_2;
+    QLabel *labelExpression;
+    QPushButton *pushButtonSqrt;
+    QPushButton *pushButton7;
+    QPushButton *pushButton8;
+    QPushButton *pushButton1;
+    QPushButton *pushButtonClearEntry;
+    QPushButton *pushButton0;
+    QPushButton *pushButton6;
+    QPushButton *pushButton4;
+    QPushButton *pushButtonUndo;
+    QPushButton *pushButtonRedo;
+    QPushButton *pushButton2;
+    QPushButton *pushButtonPlus;
+    QPushButton *pushButton3;
+    QPushButton *pushButtonMultiply;
     QPushButton *pushButtonDivision;
-    QLabel *label_2;
-    QPushButton *pushButtonReset;
-    QPushButton *pushButtonResetNumber;
+    QPushButton *pushButtonEqual;
+    QPushButton *pushButtonClear;
 
     void setupUi(QMainWindow *SummerWarClass)
     {
         if (SummerWarClass->objectName().isEmpty())
             SummerWarClass->setObjectName(QString::fromUtf8("SummerWarClass"));
-        SummerWarClass->resize(320, 420);
+        SummerWarClass->setEnabled(true);
+        SummerWarClass->resize(328, 427);
+        SummerWarClass->setMinimumSize(QSize(0, 0));
+        SummerWarClass->setLayoutDirection(Qt::LeftToRight);
+        SummerWarClass->setStyleSheet(QString::fromUtf8(""));
         centralWidget = new QWidget(SummerWarClass);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        pushButtonNumberSeven = new QPushButton(centralWidget);
-        pushButtonNumberSeven->setObjectName(QString::fromUtf8("pushButtonNumberSeven"));
-        pushButtonNumberSeven->setGeometry(QRect(0, 180, 80, 60));
-        QFont font;
-        font.setPointSize(14);
-        pushButtonNumberSeven->setFont(font);
-        label = new QLabel(centralWidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(0, 40, 320, 80));
-        QFont font1;
-        font1.setPointSize(20);
-        label->setFont(font1);
-        label->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        pushButtonNumberEight = new QPushButton(centralWidget);
-        pushButtonNumberEight->setObjectName(QString::fromUtf8("pushButtonNumberEight"));
-        pushButtonNumberEight->setGeometry(QRect(80, 180, 80, 60));
-        pushButtonNumberEight->setFont(font);
-        pushButtonNumberNine = new QPushButton(centralWidget);
-        pushButtonNumberNine->setObjectName(QString::fromUtf8("pushButtonNumberNine"));
-        pushButtonNumberNine->setGeometry(QRect(160, 180, 80, 60));
-        pushButtonNumberNine->setFont(font);
-        pushButtonMultiply = new QPushButton(centralWidget);
-        pushButtonMultiply->setObjectName(QString::fromUtf8("pushButtonMultiply"));
-        pushButtonMultiply->setGeometry(QRect(240, 180, 80, 60));
-        pushButtonMultiply->setFont(font);
-        pushButtonNumberFive = new QPushButton(centralWidget);
-        pushButtonNumberFive->setObjectName(QString::fromUtf8("pushButtonNumberFive"));
-        pushButtonNumberFive->setGeometry(QRect(80, 240, 80, 60));
-        pushButtonNumberFive->setFont(font);
+        centralWidget->setAutoFillBackground(false);
+        centralWidget->setStyleSheet(QString::fromUtf8("QWidget {\n"
+"color : #ffffff;\n"
+"background-color: #1f1f1f;\n"
+"margin: 1px;\n"
+"border: none;\n"
+"}\n"
+"QPushButton {\n"
+"width: 80;\n"
+"height: 50;\n"
+"background-color: #131313;\n"
+"}\n"
+"QPushButton:hover {\n"
+"background-color: #4a4a4a;\n"
+"}"));
+        gridLayout = new QGridLayout(centralWidget);
+        gridLayout->setSpacing(0);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
+        gridLayout->setContentsMargins(0, 0, 0, 0);
         pushButtonMinus = new QPushButton(centralWidget);
         pushButtonMinus->setObjectName(QString::fromUtf8("pushButtonMinus"));
-        pushButtonMinus->setGeometry(QRect(240, 240, 80, 60));
-        pushButtonMinus->setFont(font);
-        pushButtonNumberFour = new QPushButton(centralWidget);
-        pushButtonNumberFour->setObjectName(QString::fromUtf8("pushButtonNumberFour"));
-        pushButtonNumberFour->setGeometry(QRect(0, 240, 80, 60));
-        pushButtonNumberFour->setFont(font);
-        pushButtonNumberSix = new QPushButton(centralWidget);
-        pushButtonNumberSix->setObjectName(QString::fromUtf8("pushButtonNumberSix"));
-        pushButtonNumberSix->setGeometry(QRect(160, 240, 80, 60));
-        pushButtonNumberSix->setFont(font);
-        pushButtonNumberTwo = new QPushButton(centralWidget);
-        pushButtonNumberTwo->setObjectName(QString::fromUtf8("pushButtonNumberTwo"));
-        pushButtonNumberTwo->setGeometry(QRect(80, 300, 80, 60));
-        pushButtonNumberTwo->setFont(font);
-        pushButtonPlus = new QPushButton(centralWidget);
-        pushButtonPlus->setObjectName(QString::fromUtf8("pushButtonPlus"));
-        pushButtonPlus->setGeometry(QRect(240, 300, 80, 60));
-        pushButtonPlus->setFont(font);
-        pushButtonNumberOne = new QPushButton(centralWidget);
-        pushButtonNumberOne->setObjectName(QString::fromUtf8("pushButtonNumberOne"));
-        pushButtonNumberOne->setGeometry(QRect(0, 300, 80, 60));
-        pushButtonNumberOne->setFont(font);
-        pushButtonNumberThree = new QPushButton(centralWidget);
-        pushButtonNumberThree->setObjectName(QString::fromUtf8("pushButtonNumberThree"));
-        pushButtonNumberThree->setGeometry(QRect(160, 300, 80, 60));
-        pushButtonNumberThree->setFont(font);
-        pushButtonNumberZero = new QPushButton(centralWidget);
-        pushButtonNumberZero->setObjectName(QString::fromUtf8("pushButtonNumberZero"));
-        pushButtonNumberZero->setGeometry(QRect(80, 360, 80, 60));
-        pushButtonNumberZero->setFont(font);
-        pushButtonEqual = new QPushButton(centralWidget);
-        pushButtonEqual->setObjectName(QString::fromUtf8("pushButtonEqual"));
-        pushButtonEqual->setGeometry(QRect(240, 360, 80, 60));
-        pushButtonEqual->setFont(font);
-        pushButtonNegate = new QPushButton(centralWidget);
-        pushButtonNegate->setObjectName(QString::fromUtf8("pushButtonNegate"));
-        pushButtonNegate->setGeometry(QRect(0, 360, 80, 60));
-        pushButtonNegate->setFont(font);
-        pushButtonDot = new QPushButton(centralWidget);
-        pushButtonDot->setObjectName(QString::fromUtf8("pushButtonDot"));
-        pushButtonDot->setGeometry(QRect(160, 360, 80, 60));
-        pushButtonDot->setFont(font);
-        pushButtonErase = new QPushButton(centralWidget);
-        pushButtonErase->setObjectName(QString::fromUtf8("pushButtonErase"));
-        pushButtonErase->setGeometry(QRect(160, 120, 80, 60));
-        pushButtonErase->setFont(font);
-        pushButtonDivision = new QPushButton(centralWidget);
-        pushButtonDivision->setObjectName(QString::fromUtf8("pushButtonDivision"));
-        pushButtonDivision->setGeometry(QRect(240, 120, 80, 60));
-        pushButtonDivision->setFont(font);
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(0, 0, 320, 40));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
-        label_2->setSizePolicy(sizePolicy);
+        sizePolicy.setVerticalStretch(1);
+        sizePolicy.setHeightForWidth(pushButtonMinus->sizePolicy().hasHeightForWidth());
+        pushButtonMinus->setSizePolicy(sizePolicy);
+        QFont font;
+        font.setPointSize(16);
+        pushButtonMinus->setFont(font);
+        pushButtonMinus->setAutoFillBackground(false);
+
+        gridLayout->addWidget(pushButtonMinus, 9, 3, 1, 1);
+
+        pushButtonErase = new QPushButton(centralWidget);
+        pushButtonErase->setObjectName(QString::fromUtf8("pushButtonErase"));
+        sizePolicy.setHeightForWidth(pushButtonErase->sizePolicy().hasHeightForWidth());
+        pushButtonErase->setSizePolicy(sizePolicy);
+        pushButtonErase->setFont(font);
+        pushButtonErase->setAutoFillBackground(false);
+
+        gridLayout->addWidget(pushButtonErase, 6, 2, 1, 1);
+
+        pushButtonSqr = new QPushButton(centralWidget);
+        pushButtonSqr->setObjectName(QString::fromUtf8("pushButtonSqr"));
+        sizePolicy.setHeightForWidth(pushButtonSqr->sizePolicy().hasHeightForWidth());
+        pushButtonSqr->setSizePolicy(sizePolicy);
+        QFont font1;
+        font1.setPointSize(16);
+        font1.setBold(false);
+        font1.setItalic(false);
+        font1.setWeight(50);
+        pushButtonSqr->setFont(font1);
+
+        gridLayout->addWidget(pushButtonSqr, 4, 1, 1, 1);
+
+        pushButtonNegate = new QPushButton(centralWidget);
+        pushButtonNegate->setObjectName(QString::fromUtf8("pushButtonNegate"));
+        sizePolicy.setHeightForWidth(pushButtonNegate->sizePolicy().hasHeightForWidth());
+        pushButtonNegate->setSizePolicy(sizePolicy);
+        pushButtonNegate->setFont(font);
+        pushButtonNegate->setAutoFillBackground(false);
+
+        gridLayout->addWidget(pushButtonNegate, 11, 0, 1, 1);
+
+        pushButtonDot = new QPushButton(centralWidget);
+        pushButtonDot->setObjectName(QString::fromUtf8("pushButtonDot"));
+        sizePolicy.setHeightForWidth(pushButtonDot->sizePolicy().hasHeightForWidth());
+        pushButtonDot->setSizePolicy(sizePolicy);
+        pushButtonDot->setFont(font);
+        pushButtonDot->setAutoFillBackground(false);
+
+        gridLayout->addWidget(pushButtonDot, 11, 2, 1, 1);
+
+        labelEntry = new QLabel(centralWidget);
+        labelEntry->setObjectName(QString::fromUtf8("labelEntry"));
+        sizePolicy.setHeightForWidth(labelEntry->sizePolicy().hasHeightForWidth());
+        labelEntry->setSizePolicy(sizePolicy);
+        labelEntry->setMinimumSize(QSize(0, 0));
+        labelEntry->setMaximumSize(QSize(16777215, 100));
         QFont font2;
-        font2.setPointSize(10);
-        label_2->setFont(font2);
-        label_2->setLocale(QLocale(QLocale::Russian, QLocale::Russia));
-        label_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        pushButtonReset = new QPushButton(centralWidget);
-        pushButtonReset->setObjectName(QString::fromUtf8("pushButtonReset"));
-        pushButtonReset->setGeometry(QRect(80, 120, 80, 60));
-        pushButtonReset->setFont(font);
-        pushButtonResetNumber = new QPushButton(centralWidget);
-        pushButtonResetNumber->setObjectName(QString::fromUtf8("pushButtonResetNumber"));
-        pushButtonResetNumber->setGeometry(QRect(0, 120, 80, 60));
-        pushButtonResetNumber->setFont(font);
+        font2.setPointSize(26);
+        labelEntry->setFont(font2);
+        labelEntry->setStyleSheet(QString::fromUtf8(""));
+        labelEntry->setTextFormat(Qt::AutoText);
+        labelEntry->setScaledContents(false);
+        labelEntry->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout->addWidget(labelEntry, 2, 0, 1, 4);
+
+        pushButton5 = new QPushButton(centralWidget);
+        pushButton5->setObjectName(QString::fromUtf8("pushButton5"));
+        sizePolicy.setHeightForWidth(pushButton5->sizePolicy().hasHeightForWidth());
+        pushButton5->setSizePolicy(sizePolicy);
+        QFont font3;
+        font3.setPointSize(16);
+        font3.setBold(true);
+        font3.setWeight(75);
+        pushButton5->setFont(font3);
+        pushButton5->setAutoFillBackground(false);
+        pushButton5->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #060606;\n"
+"}\n"
+"QPushButton:hover {\n"
+"background-color: #4a4a4a;\n"
+"}"));
+
+        gridLayout->addWidget(pushButton5, 9, 1, 1, 1);
+
+        pushButton9 = new QPushButton(centralWidget);
+        pushButton9->setObjectName(QString::fromUtf8("pushButton9"));
+        sizePolicy.setHeightForWidth(pushButton9->sizePolicy().hasHeightForWidth());
+        pushButton9->setSizePolicy(sizePolicy);
+        pushButton9->setFont(font3);
+        pushButton9->setAutoFillBackground(false);
+        pushButton9->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #060606;\n"
+"}\n"
+"QPushButton:hover {\n"
+"background-color: #4a4a4a;\n"
+"}"));
+
+        gridLayout->addWidget(pushButton9, 7, 2, 1, 1);
+
+        scrollArea = new QScrollArea(centralWidget);
+        scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
+        sizePolicy.setHeightForWidth(scrollArea->sizePolicy().hasHeightForWidth());
+        scrollArea->setSizePolicy(sizePolicy);
+        scrollArea->setMaximumSize(QSize(16777215, 100));
+        scrollArea->setLayoutDirection(Qt::RightToLeft);
+        scrollArea->setStyleSheet(QString::fromUtf8(""));
+        scrollArea->setFrameShape(QFrame::StyledPanel);
+        scrollArea->setFrameShadow(QFrame::Sunken);
+        scrollArea->setWidgetResizable(true);
+        scrollArea->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 326, 69));
+        scrollAreaWidgetContents->setStyleSheet(QString::fromUtf8(""));
+        gridLayout_2 = new QGridLayout(scrollAreaWidgetContents);
+        gridLayout_2->setSpacing(0);
+        gridLayout_2->setContentsMargins(11, 11, 11, 11);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        gridLayout_2->setContentsMargins(0, 0, 0, 0);
+        labelExpression = new QLabel(scrollAreaWidgetContents);
+        labelExpression->setObjectName(QString::fromUtf8("labelExpression"));
+        sizePolicy.setHeightForWidth(labelExpression->sizePolicy().hasHeightForWidth());
+        labelExpression->setSizePolicy(sizePolicy);
+        labelExpression->setMinimumSize(QSize(0, 0));
+        labelExpression->setMaximumSize(QSize(16777215, 100));
+        labelExpression->setSizeIncrement(QSize(0, 0));
+        labelExpression->setBaseSize(QSize(0, 0));
+        QFont font4;
+        font4.setPointSize(12);
+        labelExpression->setFont(font4);
+        labelExpression->setLayoutDirection(Qt::RightToLeft);
+        labelExpression->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"height: 24;\n"
+"}"));
+        labelExpression->setFrameShape(QFrame::NoFrame);
+        labelExpression->setScaledContents(false);
+        labelExpression->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        labelExpression->setIndent(-1);
+
+        gridLayout_2->addWidget(labelExpression, 0, 0, 1, 1);
+
+        scrollArea->setWidget(scrollAreaWidgetContents);
+
+        gridLayout->addWidget(scrollArea, 3, 0, 1, 4);
+
+        pushButtonSqrt = new QPushButton(centralWidget);
+        pushButtonSqrt->setObjectName(QString::fromUtf8("pushButtonSqrt"));
+        sizePolicy.setHeightForWidth(pushButtonSqrt->sizePolicy().hasHeightForWidth());
+        pushButtonSqrt->setSizePolicy(sizePolicy);
+        pushButtonSqrt->setFont(font);
+
+        gridLayout->addWidget(pushButtonSqrt, 4, 0, 1, 1);
+
+        pushButton7 = new QPushButton(centralWidget);
+        pushButton7->setObjectName(QString::fromUtf8("pushButton7"));
+        sizePolicy.setHeightForWidth(pushButton7->sizePolicy().hasHeightForWidth());
+        pushButton7->setSizePolicy(sizePolicy);
+        pushButton7->setFont(font3);
+        pushButton7->setAutoFillBackground(false);
+        pushButton7->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #060606;\n"
+"}\n"
+"QPushButton:hover {\n"
+"background-color: #4a4a4a;\n"
+"}"));
+
+        gridLayout->addWidget(pushButton7, 7, 0, 1, 1);
+
+        pushButton8 = new QPushButton(centralWidget);
+        pushButton8->setObjectName(QString::fromUtf8("pushButton8"));
+        sizePolicy.setHeightForWidth(pushButton8->sizePolicy().hasHeightForWidth());
+        pushButton8->setSizePolicy(sizePolicy);
+        pushButton8->setFont(font3);
+        pushButton8->setAutoFillBackground(false);
+        pushButton8->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #060606;\n"
+"}\n"
+"QPushButton:hover {\n"
+"background-color: #4a4a4a;\n"
+"}"));
+
+        gridLayout->addWidget(pushButton8, 7, 1, 1, 1);
+
+        pushButton1 = new QPushButton(centralWidget);
+        pushButton1->setObjectName(QString::fromUtf8("pushButton1"));
+        sizePolicy.setHeightForWidth(pushButton1->sizePolicy().hasHeightForWidth());
+        pushButton1->setSizePolicy(sizePolicy);
+        pushButton1->setFont(font3);
+        pushButton1->setAutoFillBackground(false);
+        pushButton1->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #060606;\n"
+"}\n"
+"QPushButton:hover {\n"
+"background-color: #4a4a4a;\n"
+"}"));
+
+        gridLayout->addWidget(pushButton1, 10, 0, 1, 1);
+
+        pushButtonClearEntry = new QPushButton(centralWidget);
+        pushButtonClearEntry->setObjectName(QString::fromUtf8("pushButtonClearEntry"));
+        sizePolicy.setHeightForWidth(pushButtonClearEntry->sizePolicy().hasHeightForWidth());
+        pushButtonClearEntry->setSizePolicy(sizePolicy);
+        pushButtonClearEntry->setFont(font4);
+        pushButtonClearEntry->setAutoFillBackground(false);
+
+        gridLayout->addWidget(pushButtonClearEntry, 6, 0, 1, 1);
+
+        pushButton0 = new QPushButton(centralWidget);
+        pushButton0->setObjectName(QString::fromUtf8("pushButton0"));
+        sizePolicy.setHeightForWidth(pushButton0->sizePolicy().hasHeightForWidth());
+        pushButton0->setSizePolicy(sizePolicy);
+        pushButton0->setFont(font3);
+        pushButton0->setAutoFillBackground(false);
+        pushButton0->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #060606;\n"
+"}\n"
+"QPushButton:hover {\n"
+"background-color: #4a4a4a;\n"
+"}"));
+
+        gridLayout->addWidget(pushButton0, 11, 1, 1, 1);
+
+        pushButton6 = new QPushButton(centralWidget);
+        pushButton6->setObjectName(QString::fromUtf8("pushButton6"));
+        sizePolicy.setHeightForWidth(pushButton6->sizePolicy().hasHeightForWidth());
+        pushButton6->setSizePolicy(sizePolicy);
+        pushButton6->setFont(font3);
+        pushButton6->setAutoFillBackground(false);
+        pushButton6->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #060606;\n"
+"}\n"
+"QPushButton:hover {\n"
+"background-color: #4a4a4a;\n"
+"}"));
+
+        gridLayout->addWidget(pushButton6, 9, 2, 1, 1);
+
+        pushButton4 = new QPushButton(centralWidget);
+        pushButton4->setObjectName(QString::fromUtf8("pushButton4"));
+        sizePolicy.setHeightForWidth(pushButton4->sizePolicy().hasHeightForWidth());
+        pushButton4->setSizePolicy(sizePolicy);
+        pushButton4->setFont(font3);
+        pushButton4->setAutoFillBackground(false);
+        pushButton4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #060606;\n"
+"}\n"
+"QPushButton:hover {\n"
+"background-color: #4a4a4a;\n"
+"}"));
+
+        gridLayout->addWidget(pushButton4, 9, 0, 1, 1);
+
+        pushButtonUndo = new QPushButton(centralWidget);
+        pushButtonUndo->setObjectName(QString::fromUtf8("pushButtonUndo"));
+        sizePolicy.setHeightForWidth(pushButtonUndo->sizePolicy().hasHeightForWidth());
+        pushButtonUndo->setSizePolicy(sizePolicy);
+        pushButtonUndo->setFont(font4);
+
+        gridLayout->addWidget(pushButtonUndo, 4, 2, 1, 1);
+
+        pushButtonRedo = new QPushButton(centralWidget);
+        pushButtonRedo->setObjectName(QString::fromUtf8("pushButtonRedo"));
+        sizePolicy.setHeightForWidth(pushButtonRedo->sizePolicy().hasHeightForWidth());
+        pushButtonRedo->setSizePolicy(sizePolicy);
+        pushButtonRedo->setFont(font4);
+
+        gridLayout->addWidget(pushButtonRedo, 4, 3, 1, 1);
+
+        pushButton2 = new QPushButton(centralWidget);
+        pushButton2->setObjectName(QString::fromUtf8("pushButton2"));
+        sizePolicy.setHeightForWidth(pushButton2->sizePolicy().hasHeightForWidth());
+        pushButton2->setSizePolicy(sizePolicy);
+        pushButton2->setFont(font3);
+        pushButton2->setAutoFillBackground(false);
+        pushButton2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #060606;\n"
+"}\n"
+"QPushButton:hover {\n"
+"background-color: #4a4a4a;\n"
+"}"));
+
+        gridLayout->addWidget(pushButton2, 10, 1, 1, 1);
+
+        pushButtonPlus = new QPushButton(centralWidget);
+        pushButtonPlus->setObjectName(QString::fromUtf8("pushButtonPlus"));
+        sizePolicy.setHeightForWidth(pushButtonPlus->sizePolicy().hasHeightForWidth());
+        pushButtonPlus->setSizePolicy(sizePolicy);
+        pushButtonPlus->setFont(font);
+        pushButtonPlus->setAutoFillBackground(false);
+
+        gridLayout->addWidget(pushButtonPlus, 10, 3, 1, 1);
+
+        pushButton3 = new QPushButton(centralWidget);
+        pushButton3->setObjectName(QString::fromUtf8("pushButton3"));
+        sizePolicy.setHeightForWidth(pushButton3->sizePolicy().hasHeightForWidth());
+        pushButton3->setSizePolicy(sizePolicy);
+        pushButton3->setFont(font3);
+        pushButton3->setAutoFillBackground(false);
+        pushButton3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"background-color: #060606;\n"
+"}\n"
+"QPushButton:hover {\n"
+"background-color: #4a4a4a;\n"
+"}"));
+
+        gridLayout->addWidget(pushButton3, 10, 2, 1, 1);
+
+        pushButtonMultiply = new QPushButton(centralWidget);
+        pushButtonMultiply->setObjectName(QString::fromUtf8("pushButtonMultiply"));
+        sizePolicy.setHeightForWidth(pushButtonMultiply->sizePolicy().hasHeightForWidth());
+        pushButtonMultiply->setSizePolicy(sizePolicy);
+        QFont font5;
+        font5.setPointSize(16);
+        font5.setBold(false);
+        font5.setWeight(50);
+        pushButtonMultiply->setFont(font5);
+        pushButtonMultiply->setAutoFillBackground(false);
+
+        gridLayout->addWidget(pushButtonMultiply, 7, 3, 1, 1);
+
+        pushButtonDivision = new QPushButton(centralWidget);
+        pushButtonDivision->setObjectName(QString::fromUtf8("pushButtonDivision"));
+        sizePolicy.setHeightForWidth(pushButtonDivision->sizePolicy().hasHeightForWidth());
+        pushButtonDivision->setSizePolicy(sizePolicy);
+        pushButtonDivision->setFont(font);
+        pushButtonDivision->setAutoFillBackground(false);
+
+        gridLayout->addWidget(pushButtonDivision, 6, 3, 1, 1);
+
+        pushButtonEqual = new QPushButton(centralWidget);
+        pushButtonEqual->setObjectName(QString::fromUtf8("pushButtonEqual"));
+        sizePolicy.setHeightForWidth(pushButtonEqual->sizePolicy().hasHeightForWidth());
+        pushButtonEqual->setSizePolicy(sizePolicy);
+        pushButtonEqual->setFont(font);
+        pushButtonEqual->setAutoFillBackground(false);
+
+        gridLayout->addWidget(pushButtonEqual, 11, 3, 1, 1);
+
+        pushButtonClear = new QPushButton(centralWidget);
+        pushButtonClear->setObjectName(QString::fromUtf8("pushButtonClear"));
+        sizePolicy.setHeightForWidth(pushButtonClear->sizePolicy().hasHeightForWidth());
+        pushButtonClear->setSizePolicy(sizePolicy);
+        pushButtonClear->setFont(font4);
+        pushButtonClear->setAutoFillBackground(false);
+
+        gridLayout->addWidget(pushButtonClear, 6, 1, 1, 1);
+
         SummerWarClass->setCentralWidget(centralWidget);
 
         retranslateUi(SummerWarClass);
@@ -164,29 +448,33 @@ public:
 
     void retranslateUi(QMainWindow *SummerWarClass)
     {
-        SummerWarClass->setWindowTitle(QCoreApplication::translate("SummerWarClass", "\320\232\320\260\320\273\321\214\320\272\321\203\320\273\321\217\321\202\320\276\321\200", nullptr));
-        pushButtonNumberSeven->setText(QCoreApplication::translate("SummerWarClass", "7", nullptr));
-        label->setText(QCoreApplication::translate("SummerWarClass", "0", nullptr));
-        pushButtonNumberEight->setText(QCoreApplication::translate("SummerWarClass", "8", nullptr));
-        pushButtonNumberNine->setText(QCoreApplication::translate("SummerWarClass", "9", nullptr));
-        pushButtonMultiply->setText(QCoreApplication::translate("SummerWarClass", "\303\227", nullptr));
-        pushButtonNumberFive->setText(QCoreApplication::translate("SummerWarClass", "5", nullptr));
-        pushButtonMinus->setText(QCoreApplication::translate("SummerWarClass", "-", nullptr));
-        pushButtonNumberFour->setText(QCoreApplication::translate("SummerWarClass", "4", nullptr));
-        pushButtonNumberSix->setText(QCoreApplication::translate("SummerWarClass", "6", nullptr));
-        pushButtonNumberTwo->setText(QCoreApplication::translate("SummerWarClass", "2", nullptr));
-        pushButtonPlus->setText(QCoreApplication::translate("SummerWarClass", "+", nullptr));
-        pushButtonNumberOne->setText(QCoreApplication::translate("SummerWarClass", "1", nullptr));
-        pushButtonNumberThree->setText(QCoreApplication::translate("SummerWarClass", "3", nullptr));
-        pushButtonNumberZero->setText(QCoreApplication::translate("SummerWarClass", "0", nullptr));
-        pushButtonEqual->setText(QCoreApplication::translate("SummerWarClass", "=", nullptr));
+        SummerWarClass->setWindowTitle(QCoreApplication::translate("SummerWarClass", "Calculator", nullptr));
+        pushButtonMinus->setText(QCoreApplication::translate("SummerWarClass", "\342\210\222", nullptr));
+        pushButtonErase->setText(QCoreApplication::translate("SummerWarClass", "\342\214\253", nullptr));
+        pushButtonSqr->setText(QCoreApplication::translate("SummerWarClass", "x\302\262", nullptr));
         pushButtonNegate->setText(QCoreApplication::translate("SummerWarClass", "\302\261", nullptr));
         pushButtonDot->setText(QCoreApplication::translate("SummerWarClass", ".", nullptr));
-        pushButtonErase->setText(QCoreApplication::translate("SummerWarClass", "\342\214\253", nullptr));
+        labelEntry->setText(QCoreApplication::translate("SummerWarClass", "0", nullptr));
+        pushButton5->setText(QCoreApplication::translate("SummerWarClass", "5", nullptr));
+        pushButton9->setText(QCoreApplication::translate("SummerWarClass", "9", nullptr));
+        labelExpression->setText(QString());
+        pushButtonSqrt->setText(QCoreApplication::translate("SummerWarClass", "\342\210\232", nullptr));
+        pushButton7->setText(QCoreApplication::translate("SummerWarClass", "7", nullptr));
+        pushButton8->setText(QCoreApplication::translate("SummerWarClass", "8", nullptr));
+        pushButton1->setText(QCoreApplication::translate("SummerWarClass", "1", nullptr));
+        pushButtonClearEntry->setText(QCoreApplication::translate("SummerWarClass", "CE", nullptr));
+        pushButton0->setText(QCoreApplication::translate("SummerWarClass", "0", nullptr));
+        pushButton6->setText(QCoreApplication::translate("SummerWarClass", "6", nullptr));
+        pushButton4->setText(QCoreApplication::translate("SummerWarClass", "4", nullptr));
+        pushButtonUndo->setText(QCoreApplication::translate("SummerWarClass", "Undo", nullptr));
+        pushButtonRedo->setText(QCoreApplication::translate("SummerWarClass", "Redo", nullptr));
+        pushButton2->setText(QCoreApplication::translate("SummerWarClass", "2", nullptr));
+        pushButtonPlus->setText(QCoreApplication::translate("SummerWarClass", "+", nullptr));
+        pushButton3->setText(QCoreApplication::translate("SummerWarClass", "3", nullptr));
+        pushButtonMultiply->setText(QCoreApplication::translate("SummerWarClass", "\303\227", nullptr));
         pushButtonDivision->setText(QCoreApplication::translate("SummerWarClass", "\303\267", nullptr));
-        label_2->setText(QString());
-        pushButtonReset->setText(QCoreApplication::translate("SummerWarClass", "C", nullptr));
-        pushButtonResetNumber->setText(QCoreApplication::translate("SummerWarClass", "CE", nullptr));
+        pushButtonEqual->setText(QCoreApplication::translate("SummerWarClass", "=", nullptr));
+        pushButtonClear->setText(QCoreApplication::translate("SummerWarClass", "C", nullptr));
     } // retranslateUi
 
 };

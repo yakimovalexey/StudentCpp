@@ -16,17 +16,18 @@ private:
 	Ui::SummerWarClass ui;
 	private slots:
 	void Calculate();
+	void Operation(char sign);
 	void EnterNumber(char number);
-	void on_pushButtonNumberZero_clicked();
-	void on_pushButtonNumberOne_clicked();
-	void on_pushButtonNumberTwo_clicked();
-	void on_pushButtonNumberThree_clicked();
-	void on_pushButtonNumberFour_clicked();
-	void on_pushButtonNumberFive_clicked();
-	void on_pushButtonNumberSix_clicked();
-	void on_pushButtonNumberSeven_clicked();
-	void on_pushButtonNumberEight_clicked();
-	void on_pushButtonNumberNine_clicked();
+	void on_pushButton0_clicked();
+	void on_pushButton1_clicked();
+	void on_pushButton2_clicked();
+	void on_pushButton3_clicked();
+	void on_pushButton4_clicked();
+	void on_pushButton5_clicked();
+	void on_pushButton6_clicked();
+	void on_pushButton7_clicked();
+	void on_pushButton8_clicked();
+	void on_pushButton9_clicked();
 	void on_pushButtonDot_clicked();
 	void on_pushButtonErase_clicked();
 	void on_pushButtonPlus_clicked();
@@ -34,9 +35,13 @@ private:
 	void on_pushButtonMultiply_clicked();
 	void on_pushButtonDivision_clicked();
 	void on_pushButtonEqual_clicked();
-	void on_pushButtonReset_clicked();
-	void on_pushButtonResetNumber_clicked();
+	void on_pushButtonSqrt_clicked();
+	void on_pushButtonSqr_clicked();
+	void on_pushButtonClear_clicked();
+	void on_pushButtonClearEntry_clicked();
 	void on_pushButtonNegate_clicked();
+	void on_pushButtonUndo_clicked();
+	void on_pushButtonRedo_clicked();
 	void keyPressEvent(QKeyEvent *event);
 };
 
