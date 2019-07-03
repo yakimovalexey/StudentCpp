@@ -254,5 +254,3 @@ void SummerWar::keyPressEvent(QKeyEvent *event)
 		break;
 	}
 }
-
-//Task: Undo/Redo (Qt Undo Framework)
