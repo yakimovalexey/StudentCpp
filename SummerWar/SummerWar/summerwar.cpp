@@ -115,7 +115,7 @@ void SummerWar::Operation(char sign)
 		ui.labelExpression->setText(ui.labelExpression->text() + ui.labelEntry->text() + ' ' + sign + ' ');
 		value = ui.labelEntry->text().toDouble();
 	}
-	else if (operation_code != 1)
+	else if (operation_code == 0)
 	{
 		undo.value.push(value);
 		undo.expression.push(ui.labelExpression->text());
