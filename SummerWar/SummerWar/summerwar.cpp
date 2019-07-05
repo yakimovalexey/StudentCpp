@@ -238,6 +238,7 @@ void SummerWar::keyPressEvent(QKeyEvent *event)
 		break;
 	}
 }
+<<<<<<< HEAD
 
 void SummerWar::on_pushButtonUndo_clicked()
 {
@@ -273,3 +274,5 @@ void SummerWar::on_pushButtonRedo_clicked()
 		redo.expression.pop();
 	}
 }
+=======
+>>>>>>> master
