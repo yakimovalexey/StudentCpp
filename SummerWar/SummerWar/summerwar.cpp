@@ -238,6 +238,10 @@ void SummerWar::keyPressEvent(QKeyEvent *event)
 		break;
 	}
 }
+<<<<<<<<< Temporary merge branch 1
+<<<<<<< HEAD
+=========
+>>>>>>>>> Temporary merge branch 2
 
 void SummerWar::on_pushButtonUndo_clicked()
 {
@@ -272,4 +276,10 @@ void SummerWar::on_pushButtonRedo_clicked()
 		redo.value.pop();
 		redo.expression.pop();
 	}
+<<<<<<<<< Temporary merge branch 1
 }
+=======
+>>>>>>> master
+=========
+}
+>>>>>>>>> Temporary merge branch 2
