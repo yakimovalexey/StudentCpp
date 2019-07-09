@@ -110,6 +110,8 @@ void SummerWar::on_pushButtonErase_clicked()
 
 void SummerWar::Operation(char sign)
 {
+	if (ui.labelEntry->text().right(1) == '.')
+		ui.labelEntry->setText(ui.labelEntry->text().remove(ui.labelEntry->text().size() - 1, 1));
 	if (operation_name == NULL)
 	{
 		ui.labelExpression->setText(ui.labelExpression->text() + ui.labelEntry->text() + ' ' + sign + ' ');
