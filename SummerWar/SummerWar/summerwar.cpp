@@ -110,8 +110,10 @@ void SummerWar::on_pushButtonErase_clicked()
 
 void SummerWar::Operation(char sign)
 {
-	if (ui.labelEntry->text().right(1) == '.')
-		ui.labelEntry->setText(ui.labelEntry->text().remove(ui.labelEntry->text().size() - 1, 1));
+	while ((ui.labelEntry->text().lastIndexOf('.') != -1) && ((ui.labelEntry->text().right(1) == '0') || (ui.labelEntry->text().right(1) == '.')))
+	{
+		on_pushButtonErase_clicked();
+	}
 	if (operation_name == NULL)
 	{
 		ui.labelExpression->setText(ui.labelExpression->text() + ui.labelEntry->text() + ' ' + sign + ' ');
@@ -233,6 +235,10 @@ void SummerWar::keyPressEvent(QKeyEvent *event)
 		break;
 	case Qt::Key_Backspace:
 		on_pushButtonErase_clicked();
+		break;
+	case Qt::Key_Z:
+		if (QApplication::keyboardModifiers() == Qt::ControlModifier)
+			on_pushButtonUndo_clicked();
 		break;
 	default:
 		if (event->key() >= Qt::Key_0 && event->key() <= Qt::Key_9)

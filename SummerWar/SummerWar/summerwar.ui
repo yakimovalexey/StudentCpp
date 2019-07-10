@@ -200,6 +200,9 @@ background-color: #4a4a4a;
       <property name="styleSheet">
        <string notr="true"/>
       </property>
+      <property name="lineWidth">
+       <number>10</number>
+      </property>
       <property name="text">
        <string>0</string>
       </property>
